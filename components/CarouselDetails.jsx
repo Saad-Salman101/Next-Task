@@ -9,7 +9,7 @@ const CarouselDetails = () => {
     let id = 213456489
   return (
   <>
-        <div className='address-container' style={{ display: "flex", justifyContent: "center", alignItems: "center",width:"374px", height:"42px" }}>
+        <div className='address-container' style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
         <h3 className='address-heading' style={{ fontSize: '4rem', fontFamily: 'Lato, sans-serif',textAlign:"center", wordSpacing:"2rem" }}>SHELTON STREET  COVENT GARDEN LONDON  WC2H UNITED KINGDOM</h3>
         </div>
     <div style={{display:"flex", justifyContent:"space-evenly", alignContent:'center'}}>
