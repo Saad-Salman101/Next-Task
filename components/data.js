@@ -1,0 +1,27 @@
+const imageslide = [
+    {
+      url: "/../public/images/photo-1564.jpg",
+      title: "React Background full Screen Automatic Image Slider 1",
+      body:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et",
+    },
+    {
+      url:
+        "/../public/images/photo2.png",
+      title: "React Background full Screen Automatic Image Slider 2",
+      body:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et",
+    },
+    {
+      url:
+        "/../public/images/photo3.jpg",
+      title: "React Background full Screen Automatic Image Slider 3",
+      body:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et",
+    },
+ 
+    
+  ];
+  
+  export default imageslide;
+  
