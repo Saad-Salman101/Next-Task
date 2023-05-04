@@ -4,13 +4,13 @@ const BuyNow = () => {
   let price =20000000
   let id = 213456489
   return (
-    <div className="flex flex-col md:flex-row justify-between items-center mt-10 bg-black rounded-3xl md:rounded-5xl py-5 md:py-10">
-      <h1 className="text-3xl md:text-4xl lg:text-5xl text-white ml-5 md:ml-0 md:mr-10 lg:mr-20">{`£ ${price} GBP`}</h1>
-      <div className="flex flex-col items-center md:flex-row md:items-start">
-        <div className='flex-col'>
-        <h1 className="text-3xl md:text-4xl lg:text-5xl text-white md:mr-10 lg:mr-20">BUY ENTRY NOW</h1>
-        <h3 className="text-sm font-medium ml-32 text-white">{`#ZM${id}`}</h3>
-        </div>
+    <div className="flex  justify-between mt-5 bg-black rounded-3xl w-[454px] h-[58px] p-2">
+      <div className="text-[19px] leading-[26px] ml-3 font-Lato  text-white">{`£ ${price} GBP`}</div>
+
+        <div className='flex-col text-right mr-2 '>
+        <div className="text-[19px] leading-[26px]  font-Lato  text-white">BUY ENTRY NOW</div>
+        <div className="text-[9px] leading-[12px] text-right font-Lato text-white">{`#ZM${id}`}</div>
+
       </div>
     </div>
   )

@@ -1,6 +1,6 @@
 const imageslide = [
     {
-      url: "/images/photo-1564.jpg",
+      url: "/images/photo1.jpg",
       title: "React Background full Screen Automatic Image Slider 1",
       body:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et",

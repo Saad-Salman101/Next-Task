@@ -8,7 +8,7 @@ import LikeAndShare from "./LikeAndShare";
 const BackGroundCarousel = () => {
   const [currentState, setCurrentState] = useState(0);
   const bgImageStyle = { height: "100vh" };
-  const targetDate = new Date("2022-12-31T23:59:59");
+  const targetDate = new Date("2023-12-31T23:59:59");
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -27,43 +27,46 @@ const BackGroundCarousel = () => {
 
 
   return (
-    <div className="container-style w-full">
-      <div
+    <div className="container-style h-[547px] w-[454px] relative ">
+      <div 
         style={{
           ...bgImageStyle,
-        }}
+        }} 
+        // className="h-[547px] w-[454px]"
       >
         <Image
           src={imageslide[currentState].url}
           alt={imageslide[currentState].title}
-          layout="fill"
+          layout="responsive"
           objectFit="cover"
           objectPosition="center"
-          className="relative"
+          className="rounded-3xl"
+          height={547}
+          width={460}
         />
       </div>
       <div className="description"></div>
-      <div className="w-full">
+      <div className="w-full ">
 
 
-        <div className="text-white text-10xl absolute top-0 w-full">
+        <div className="text-white absolute top-5 w-full">
           <Timer targetDate={targetDate} />
           <LikeAndShare/>
         </div>
 
-        <div className="text-white text-center text-lg absolute bottom-0 w-auto h-auto">
-          <CarouselDetails />
-          <div className="carousel-boult flex">
+        <div className="text-white text-center absolute bottom-2 w-auto h-auto">
+        <div className="carousel-boult flex justify-center">
             {imageslide.map((imageslide, i) => (
-              <span
+              <div
                 key={i}
                 onClick={() => goToNext(i)}
-                className={`w-10 h-1 bg-gray-400 mx-2 rounded-full cursor-pointer ${
-                  i === currentState ? "bg-black" : ""
+                className={`w-3 h-1 bg-white mx-2 rounded-full cursor-pointer ${
+                  i === currentState ? "bg-red" : ""
                 }`}
-              ></span>
+              ></div>
             ))}
           </div>
+          <CarouselDetails />
         </div>
       </div>
     </div>

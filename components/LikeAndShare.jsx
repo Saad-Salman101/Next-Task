@@ -1,5 +1,8 @@
 import React, { useState} from "react";
-import { FaHeart, FaShare } from "react-icons/fa";
+import { FaHeart } from "react-icons/fa";
+import Shareimg from '../public/images/Share-icon.png'
+import Image from 'next/image';
+
 
 const LikeAndShare = () => {
 
@@ -10,19 +13,18 @@ const LikeAndShare = () => {
 
   return (
     <>
-            <div className="text-white text-10xl absolute top-1px  w-full">
-          <div className="flex justify-end z-10">
+            <div className="flex justify-end  absolute mt-5  w-full">
+          <div className=" z-10 mr-0  ">
+          <button >
+              <Image src={Shareimg} alt="Logo" width={23} height={23} />
+            </button>
             <button
               onClick={handleHeartClick}
-              className="bg-transparent border-none cursor-pointer m-2"
             >
               <FaHeart
-                size={40}
+                className="text-red w-[73px] h-[23px] m-0"
                 style={{ color: isHeartClicked ? "red" : "rgba(250,0,0,0.45)" }}
               />
-            </button>
-            <button className="bg-transparent border-none cursor-pointer m-2">
-              <FaShare size={40} className="text-black m-2" />
             </button>
           </div>
         </div>
