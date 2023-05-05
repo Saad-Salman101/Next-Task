@@ -17,7 +17,7 @@ const Timer = ({ targetDate }) => {
   const seconds = timeLeft.seconds.toString().padStart(2, "0");
 
   return (
-    <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 lg:gap-20">
+    <div className="flex flex-wrap justify-center items-center ">
       {seconds == 0 ? (
         <h1 className="w-full h-20 flex justify-center items-center mt-10 text-2xl md:text-4xl font-bold text-red-600">
           Time Expired
