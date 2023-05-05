@@ -38,7 +38,6 @@ const BackGroundCarousel = () => {
         style={{
           ...bgImageStyle,
         }} 
-        // className="h-[547px] w-[454px]"
       >
         <Image
           src={imageslide[currentState].url}
@@ -52,8 +51,12 @@ const BackGroundCarousel = () => {
         />
       </div>
       <div className="description w-full flex justify-between absolute top-[250px]">
-        <Image src={LeftArrow} alt="left Arrow " className="cursor-pointer m-4" onClick={() => goToNext("prev")} />
-        <Image src={RightArrow} alt="Right Arrow" className="cursor-pointer m-4" onClick={() => goToNext("next")} />
+        <div className=" w-10">
+        <Image src={LeftArrow} alt="left Arrow " className="cursor-pointer " onClick={() => goToNext("prev")} />
+        </div>
+        <div className=" w-10">
+        <Image src={RightArrow} alt="Right Arrow" className="cursor-pointer " onClick={() => goToNext("next")} />
+        </div>
       </div>
       <div className="w-full ">
 

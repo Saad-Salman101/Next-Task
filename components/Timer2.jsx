@@ -18,28 +18,28 @@ const Timer = ({ targetDate }) => {
 
   return (
     <div className="flex flex-wrap justify-center items-center ">
-      {seconds == 0 ? (
+      {days==0 & hours==0 & minutes==0 & seconds == 0 ? (
         <h1 className="w-full h-20 flex justify-center items-center mt-10 text-2xl md:text-4xl font-bold text-red-600">
           Time Expired
         </h1>
       ) : (
         <>
           <div className="flex w-[390px] h-[59px] justify-evenly">
-            <div className="flex flex-col items-center gap-2">
-              <h1 className="text-4xl">{days}</h1>
-              <h2 className="text-sm">DAYS</h2>
+            <div className="flex flex-col items-center gap-2 ml-0">
+              <h1 className="text-4xl font-light">{days}</h1>
+              <h2 className="text-sm font-light">DAYS</h2>
             </div>
-            <div className="flex flex-col items-center gap-2">
-              <h1 className="text-4xl">{hours}</h1>
-              <h2 className="text-sm">HOURS</h2>
+            <div className="flex flex-col items-center gap-2 ml-4">
+              <h1 className="text-4xl font-light">{hours}</h1>
+              <h2 className="text-sm font-light">HOURS</h2>
             </div>
-            <div className="flex flex-col items-center gap-2">
-              <h1 className="text-4xl">{minutes}</h1>
-              <h2 className="text-sm">MINUTES</h2>
+            <div className="flex flex-col items-center gap-2  ml-4">
+              <h1 className="text-4xl font-light">{minutes}</h1>
+              <h2 className="text-sm font-light">MINUTES</h2>
             </div>
-            <div className="flex flex-col items-center gap-2">
-              <h1 className="text-4xl">{seconds}</h1>
-              <h2 className="text-sm">SECONDS</h2>
+            <div className="flex flex-col items-center gap-2  ml-4">
+              <h1 className="text-4xl font-light">{seconds}</h1>
+              <h2 className="text-sm font-light">SECONDS</h2>
             </div>
           </div>
         </>
