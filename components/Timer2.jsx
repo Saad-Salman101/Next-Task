@@ -26,20 +26,20 @@ const Timer = ({ targetDate }) => {
         <>
           <div className="flex w-[390px] h-[59px] justify-evenly">
             <div className="flex flex-col items-center gap-2 ml-0">
-              <h1 className="text-4xl font-light">{days}</h1>
-              <h2 className="text-sm font-light">DAYS</h2>
+              <h1 className="text-4xl font-light tracking-2px">{days}</h1>
+              <h2 className="text-sm font-light tracking-2px">DAYS</h2>
             </div>
             <div className="flex flex-col items-center gap-2 ml-4">
-              <h1 className="text-4xl font-light">{hours}</h1>
-              <h2 className="text-sm font-light">HOURS</h2>
+              <h1 className="text-4xl font-light tracking-2px">{hours}</h1>
+              <h2 className="text-sm font-light tracking-2px">HOURS</h2>
             </div>
             <div className="flex flex-col items-center gap-2  ml-4">
-              <h1 className="text-4xl font-light">{minutes}</h1>
-              <h2 className="text-sm font-light">MINUTES</h2>
+              <h1 className="text-4xl font-light tracking-2px">{minutes}</h1>
+              <h2 className="text-sm font-light tracking-2px">MINUTES</h2>
             </div>
             <div className="flex flex-col items-center gap-2  ml-4">
-              <h1 className="text-4xl font-light">{seconds}</h1>
-              <h2 className="text-sm font-light">SECONDS</h2>
+              <h1 className="text-4xl font-light tracking-2px">{seconds}</h1>
+              <h2 className="text-sm font-light tracking-2px">SECONDS</h2>
             </div>
           </div>
         </>

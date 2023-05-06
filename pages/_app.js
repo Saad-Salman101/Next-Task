@@ -1,7 +1,8 @@
 import '../styles/globals.css';
 import 'tailwindcss/tailwind.css';
-import BackGround from '../components/BackGroundCarousel';
-import BuyNow from '../components/BuyNow2'
+// import BackGround from '../components/BackGroundCarousel';
+// import BuyNow from '../components/BuyNow2'
+import Home from '../components/Home';
 
 
 function MyApp({ Component, pageProps }) {
@@ -9,9 +10,10 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <div>
-      <BackGround/>
+      <Home/>
+      {/* <BackGround/> */}
       <Component {...pageProps} />
-      <BuyNow/>
+      {/* <BuyNow/> */}
     </div>
   );
 }
