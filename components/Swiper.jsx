@@ -31,7 +31,7 @@ const SwiperSlider = ({ children }) => {
 
   return (
     <>
-    <div className="flex justify-around w-full align-center mb-3">
+    <div className="flex justify-around w-full align-center mt-3 mb-3">
 
         <div className="text-[30px] leading-[30px] tracking-[2px] ml-3 font-Lato"> FEATURED</div>
 
