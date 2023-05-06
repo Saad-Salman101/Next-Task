@@ -19,7 +19,7 @@ const Timer = ({ targetDate }) => {
   return (
     <div className="flex flex-wrap justify-center items-center ">
       {days==0 & hours==0 & minutes==0 & seconds == 0 ? (
-        <h1 className="w-full h-20 flex justify-center items-center mt-10 text-2xl md:text-4xl font-bold text-red-600">
+        <h1 className="w-full h-20 flex justify-center items-center mt-10 text-2xl md:text-4xl font-bold text-white">
           Time Expired
         </h1>
       ) : (

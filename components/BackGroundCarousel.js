@@ -90,7 +90,7 @@ const BackGroundCarousel = ({ mydata }) => {
             <LikeAndShare />
           </div>
 
-          <div className="text-white text-center absolute bottom-2 w-auto h-auto">
+          <div className="text-white text-center absolute bottom-2 w-full h-auto">
             <div className="carousel-boult flex justify-center">
               {imageslide.map((imageslide, i) => (
                 <div
