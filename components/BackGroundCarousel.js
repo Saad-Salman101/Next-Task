@@ -67,7 +67,7 @@ const BackGroundCarousel = ({ mydata }) => {
           )}
         </div>
         <div className="description w-full flex justify-between absolute top-[250px]">
-          <div className=" w-10">
+          <div className=" w-10 ">
             <Image
               src={LeftArrow}
               alt="left Arrow "
@@ -75,11 +75,11 @@ const BackGroundCarousel = ({ mydata }) => {
               onClick={() => goToNext("prev")}
             />
           </div>
-          <div className=" w-10">
+          <div className=" w-4">
             <Image
               src={RightArrow}
               alt="Right Arrow"
-              className="cursor-pointer "
+              className="cursor-pointer ml-2"
               onClick={() => goToNext("next")}
             />
           </div>

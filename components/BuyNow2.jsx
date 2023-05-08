@@ -16,3 +16,5 @@ const BuyNow = ({mydata}) => {
 }
 
 export default BuyNow
+
+
