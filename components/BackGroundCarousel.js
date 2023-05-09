@@ -39,7 +39,7 @@ const BackGroundCarousel = ({ mydata }) => {
   };
 
   const encryptedId = CryptoJS.AES.encrypt(mydata.id.toString(), 'secret').toString(); // encrypt mydata.id
-
+  console.log(encryptedId);
   const imagesArray = mydata.details.images.split(",");
 
   return (
