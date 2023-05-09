@@ -29,11 +29,11 @@ const SwiperSlider = ({ children }) => {
     const handleResize = () => {
       const windowWidth = window.innerWidth;
       if (windowWidth >= 1024) {
-        setSlidesPerView(4);
+        setSlidesPerView(2);
       } else if (windowWidth >= 768) {
         setSlidesPerView(2);
       } else {
-        setSlidesPerView(1);
+        setSlidesPerView(2);
       }
     };
 

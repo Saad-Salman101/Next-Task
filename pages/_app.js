@@ -1,13 +1,12 @@
 import '../styles/globals.css';
-import 'tailwindcss/tailwind.css';
-import Home from '../components/Home';
+// import Home from '../components/Home';
 
 function MyApp({ Component, pageProps }) {
   
 
   return (
     <div>
-        <Home/>
+        {/* <Home/> */}
       <Component {...pageProps} />
     </div>
   );

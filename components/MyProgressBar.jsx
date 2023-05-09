@@ -11,9 +11,9 @@ function MyProgressBar(props) {
       text={`${props.value}%`}
       styles={buildStyles({  
         // Colors
-        pathColor: `rgba(	255, 255, 255, 0.7)`,
-        textColor: '#BE9F56',
-        trailColor: '#BE9F56',
+        pathColor: `#BE9F56`,
+        textColor: '#FFFFFF',
+        trailColor: 'rgba(	255, 255, 255, 0.7)',
         backgroundColor: '#BE9F56',
       })}
     />

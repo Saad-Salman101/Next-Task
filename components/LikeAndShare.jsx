@@ -13,7 +13,7 @@ const LikeAndShare = () => {
 
   return (
     <>
-            <div className="flex justify-end  absolute mt-5  w-full">
+            <div className="flex justify-end  absolute mt-7  w-full">
           <div className=" z-10 mr-0  ">
           <button >
               <Image src={Shareimg} alt="Logo" width={23} height={23} />

@@ -1,9 +1,10 @@
 import React from 'react'
 
-const BuyNow = ({mydata}) => {
+const BuyNow2 = ({mydata}) => {
 
   return (
-    <div className="flex  justify-between mt-2 bg-black rounded-3xl w-[454px] h-[58px] p-2">
+
+    <div className="flex  justify-between mt-2 bg-black rounded-3xl w-[454px] h-[58px] p-2 cursor-pointer">
       <div className="text-[19px] leading-[26px] ml-3 font-Lato  text-white tracking-[1.2px]">{`£ ${mydata.price} ${mydata.currency}`}</div>
 
         <div className='flex-col text-right mr-2 '>
@@ -12,9 +13,10 @@ const BuyNow = ({mydata}) => {
 
       </div>
     </div>
+
   )
 }
 
-export default BuyNow
+export default BuyNow2
 
 

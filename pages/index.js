@@ -1,18 +1,13 @@
-import Home from '../components/Home';
+import dynamic from 'next/dynamic';
 
-const Index = () => {
-  
+const Home = dynamic(() => import('../components/Home'), { ssr: false });
 
+const index = () => {
   return (
-    <>
-    <Home/>
-  <p> ..</p>
-  </>
+    <div>
+      <Home />
+    </div>
+  );
+};
 
-
-  )
-}
-
-export default Index
-
-
+export default index;
