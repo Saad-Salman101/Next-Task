@@ -1,36 +1,38 @@
+import 'es6-promise/auto';
 import { useRouter } from 'next/router';
 import CryptoJS from 'crypto-js';
-import data from '../../components/zp_api_listing_data.json'; // your product data source
+import data from '../../components/zp_api_listing_data.json';
+import { useEffect,useState } from 'react';
+
 
 export default function ProductPage() {
   const router = useRouter();
-  let decryptedId = '';
+  const id = router.query.slug;
+  const [product, setProduct] = useState(null);
+  const [loading, setLoading] = useState(true);
+  
+  // Decrypt the ID from the query
+  const decodedId = decodeURIComponent(id);
+  const bytes = CryptoJS.AES.decrypt(decodedId, 'secret');
+  const decryptedId = bytes.toString(CryptoJS.enc.Utf8);
 
-  if (router.query.slug) {
-    // Decrypt the ID from the slug
-    const bytes = CryptoJS.AES.decrypt(router.query.slug, 'secret');
-    decryptedId = bytes.toString(CryptoJS.enc.Utf8);
-
-    if (decryptedId) {
-      const decryptedObject = JSON.parse(decryptedId); // Parse the decrypted string into an object
-      if (decryptedObject.salt) {
-        // Access the 'salt' property here
-        const saltValue = decryptedObject.salt;
-        console.log(saltValue);
-      } else {
-        // Handle the case where 'salt' is undefined or not present
-        console.log("'salt' property is not present in the decrypted object.");
-      }
-    } else {
-      console.log("Decrypted data is undefined.");
-    }
+  useEffect(() => {
+    const fetchProduct = async () => {
+      // Simulate fetching product data asynchronously
+      await new Promise((resolve) => setTimeout(resolve, 1000)); { /* eslint-disable-line no-undef */ }
+      
+      // Find the product with the decrypted ID
+      const product = data.listing.find((p) => p.id === parseInt(decryptedId));
+      setProduct(product);
+      setLoading(false);
+    };
+    
+    fetchProduct();
+  }, [decryptedId]);
+  
+  if (loading) {
+    return <div>Loading...</div>;
   }
-
-  // Find the product with the decrypted ID
-  const product = data.listing.find((p) => p.id == parseInt(decryptedId));
-  console.log(product);
-
-  // Render the product information
   return (
     <div>
       <h1 className='font-[38px]'>{product.id}</h1>

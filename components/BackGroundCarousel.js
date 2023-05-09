@@ -38,20 +38,23 @@ const BackGroundCarousel = ({ mydata }) => {
     }
   };
 
-  const encryptedId = CryptoJS.AES.encrypt(mydata.id.toString(), 'secret').toString(); // encrypt mydata.id
-  console.log(encryptedId);
+
+  const encryptedId = CryptoJS.AES.encrypt(mydata.id.toString(), 'secret').toString();
+const encodedId = encodeURIComponent(encryptedId);
+console.log(encodedId)
   const imagesArray = mydata.details.images.split(",");
 
   return (
-    <Link href={`/product/${encryptedId}`} passHref>
+    
       <a>
       <>
         <div className="container-style h-[547px] w-[454px] relative ">
+        <Link href={`/product/${encodedId}`} passHref>
           <div
             style={{
               ...bgImageStyle,
             }}
-          >
+          > 
             {imagesArray[currentState] ? (
               <Image
                 src={imagesArray[currentState]}
@@ -73,6 +76,7 @@ const BackGroundCarousel = ({ mydata }) => {
               />
             )}
           </div>
+          </Link>
           <div className="description w-full flex justify-between absolute top-[250px]">
             <div className="ml-8 w-12 ">
               <Image
@@ -120,7 +124,6 @@ const BackGroundCarousel = ({ mydata }) => {
         </div>
     </>
     </a>
-    </Link>
 
   );
 };
