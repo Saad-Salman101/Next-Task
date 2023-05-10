@@ -28,7 +28,7 @@ const SwiperSlider = ({ children }) => {
   useEffect(() => {
     const handleResize = () => {
       const windowWidth = window.innerWidth;
-      if (windowWidth >= 1024) {
+      if (windowWidth >= 1204) {
         setSlidesPerView(4);
       } else if (windowWidth >= 768) {
         setSlidesPerView(2);
