@@ -28,11 +28,11 @@ const SwiperSlider = ({ children }) => {
   useEffect(() => {
     const handleResize = () => {
       const windowWidth = window.innerWidth;
-      if (windowWidth >= 1204) {
-        setSlidesPerView(4);
-      } else if (windowWidth >= 768) {
+      if (windowWidth >= 1600) {
         setSlidesPerView(2);
-      } else {
+      } else if (windowWidth >= 1366 &&  windowWidth >= 930) {
+        setSlidesPerView(2);
+      } else if (windowWidth < 930) {
         setSlidesPerView(1);
       }
     };
@@ -52,7 +52,7 @@ const SwiperSlider = ({ children }) => {
       slidesPerView,
     }));
   }, [slidesPerView]);
-
+ console.log(window.innerWidth)
   return (
     <>
       <div className="flex justify-around w-full align-center mt-3 mb-3">
