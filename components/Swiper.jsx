@@ -52,7 +52,7 @@ const SwiperSlider = ({ children }) => {
       slidesPerView,
     }));
   }, [slidesPerView]);
- console.log(window.innerWidth)
+
   return (
     <>
       <div className="flex justify-around w-full align-center mt-3 mb-3">
