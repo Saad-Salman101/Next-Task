@@ -24,11 +24,9 @@ const Header = ({props}) => {
               <Image src={logo} alt='Logo' width={100} height={30}/>
             </div>
           </div>
-          <div className='flex flex-around mr-12'>
-            <div className={` uppercase font-Lato tracking-[1.2px] text-lg ml-16 cursor-pointer ${path == 'photograghy' ? 'text-[#BE9F56]' : 'text-black'}`}>photography</div>
-            <div className={` uppercase font-Lato tracking-[1.2px] font-[38px] ml-16 cursor-pointer ${path == 'video' ? 'text-[#BE9F56]' : 'text-black'}`}>video</div>
-            <div className={` uppercase font-Lato tracking-[1.2px] font-[38px] ml-16 cursor-pointer ${path == 'floorplan' ? 'text-[#BE9F56]' : 'text-black'}`}> <Link href={`/floorplan/${props}`} passHref>floor plan</Link></div>
-            <div className={` uppercase font-Lato tracking-[1.2px] font-[38px] ml-16 cursor-pointer ${path == 'map' ? 'text-[#BE9F56]' : 'text-black'}`}>map</div>
+          <div className='flex justify-center mr-12 w-[40rem]'>
+            <div className={`uppercase font-Lato tracking-[1.2px] font-[50px] ml-16 cursor-pointer ${path == 'floorplan' ? 'text-[#BE9F56]' : 'text-[#BE9F56]'}`}> <Link href={`/floorplan/${props}`} passHref>floor plan</Link></div>
+
           </div>
 
           <div className='flex items-center'>
@@ -46,9 +44,7 @@ const Header = ({props}) => {
             </div>
           </div>
         </div>
-        <div className='ml-6 mb-6'>
-              <Link href="/"> BACK </Link>
-            </div>
+
       </div>
     </>
   )
