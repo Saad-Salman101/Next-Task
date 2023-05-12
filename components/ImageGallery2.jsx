@@ -6,12 +6,12 @@ const ImageGallery2 = ({ props }) => {
   return (
 <div className="container mx-auto">
   {/* heading text */}
-  <ul className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-4">
+  <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4">
   {props.map((imageSrc, index) => (
   <li
     className={`relative bg-black ${
       index === 0 || index === 1 ? 'col-span-2' :
-      index === 2 || index === 3 || index === 4 ? 'col-span-3' :
+      index === 2 || index === 3 || index === 4 ? 'col-span-1' :
       index === 5 || index === 6 ? 'col-span-2' :
       index === 7 ? 'col-span-4' : 'col-span-1'
     }`}
