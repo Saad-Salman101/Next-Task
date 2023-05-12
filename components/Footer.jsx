@@ -13,14 +13,14 @@ const Footer = ({myprops}) => {
         <>
             <div className="mt-12">
                 <div className="w-full flex justify-center items-center">
-                <div className="w-[70%] border-t-2 border-yellow-200 text-white">
+                <div className="w-[70%] border-t-2 border-custom-golden text-white">
                     .
                 </div>
                 </div>
             <div className="flex justify-between mt-5 ">
-                <div className="ml-3 text-lg">
-                    <div className="text-gray-700 ">#ZM{myprops.id}</div>
-                    <div className="text-gray-700">{myprops.id}</div>
+                <div className="ml-10 text-lg">
+                    <div className="text-gray-400  tracking-[3px]">#ZM{myprops.id}</div>
+                    <div className="text-gray-400 tracking-[3px]">{myprops.id}</div>
                 </div>
                 <div className="flex-col justify-end">
                     <div className="flex  uppercase ml-4">
@@ -30,12 +30,12 @@ const Footer = ({myprops}) => {
                                 {myprops.ticket_id} ticket(s)
                                 </div>
                                 <div className="text-white m-4 text-lg font-bold">
-                                    £ {myprops.ticketprice}
-                                </div>
-                                <div className="text-white text-sm">#ZM{myprops.id}</div>
+  € {myprops.ticketprice == null ? "Null" : myprops.ticketprice}
+</div>
+                                <div className="text-white text-sm text-center">#ZM{myprops.id}</div>
                             </div>
-                            <div className="bg-black text-center text-white mt-2 p-3 rounded-md">
-                                <button> Buy Now</button>
+                            <div className="bg-black text-center text-white mt-2 p-1 rounded-md uppercase">
+                                <button> BUY NOW</button>
                             </div>
                         </div>
 
@@ -48,7 +48,7 @@ const Footer = ({myprops}) => {
                         <Timer targetDate={targetDate} />
                     </div>
                     <div>
-                        <button className="uppercase text-white bg-black mt-3 p-3 pl-8 pr-8 ml-12 rounded-md">
+                        <button className="uppercase text-white bg-black mt-3 p-3 pt-6 pb-6 pl-8 pr-8 ml-12 rounded-md">
                             enter <br /> now
                         </button>
                     </div>

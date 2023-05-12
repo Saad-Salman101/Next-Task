@@ -102,20 +102,20 @@ const Modal = ({ imagesArray, imageSrc, onClose }) => {
                 <div className="flex flex-col absolute top-[200px]  left-[200px] justify-center  px-4">
 
                     <button
-                        className="text-white mt-5 border-b border-yellow-500 p-2 focus:outline-none"
+                        className="text-white mt-5 border-b border-custom-golden p-2 focus:outline-none"
                         onClick={handleZoomIn}
                     >
                         <Image src={ZoomIn} alt=" zoom out" width={30} height={30} />
                     </button>
                     <button
-                        className="text-white mt-5 border-b border-yellow-500 p-2 focus:outline-none"
+                        className="text-white mt-5 border-b border-custom-golden p-2 focus:outline-none"
                         onClick={handleRotate}
                     >
                         <Image src={Rotate} alt=" zoom out" width={30} height={30} />
                     </button>
 
                     <button
-                        className="text-white  border-b border-yellow-500 mt-5 p-2 bg-white  focus:outline-none"
+                        className="text-white  border-b border-ycustom-golden mt-5 p-2 bg-white  focus:outline-none"
                         onClick={handleZoomOut}
                     ><Image src={ZoomOut} alt=" zoom out" width={30} height={30} />
                         -

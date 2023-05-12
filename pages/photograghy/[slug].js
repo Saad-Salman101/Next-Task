@@ -45,7 +45,7 @@ export default function PhotographyPage() {
 
   const encryptedId = CryptoJS.AES.encrypt(decryptedId.toString(), 'secret').toString();
   const encodedId = encodeURIComponent(encryptedId);
-
+console.log(decryptedId)
   return (
     <>
       <Header props={encodedId} />

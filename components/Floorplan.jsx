@@ -20,7 +20,7 @@ console.log(product)
         {props.map((imageSrc, index) => (
 <div
   key={`floorplan-image-${index}`}
-  className="hover:border-yellow-500 active:border-golden focus:border-golden m-4 border border-black h-48 md:h-60 lg:h-72 xl:h-96 "
+  className="hover:border-custom-golden active:border-golden focus:border-golden m-4 border border-black h-48 md:h-60 lg:h-72 xl:h-96 "
   onClick={() => handleImageClick(index)}
 >
   <Image
